@@ -8,6 +8,7 @@
 <meta property="aweme:image:height" content="750">
 <meta name="aweme:url" content="https://lovinhouse.github.io">
 <meta name="aweme:qrcode" content="">
+<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? "https://" : "http://");document.write(unescape("%3Cspan style='display:none;' id='cnzz_stat_icon_1278142772'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "v1.cnzz.com/z_stat.php%3Fid%3D1278142772' type='text/javascript'%3E%3C/script%3E"));</script>
 <script>
     var ua = navigator.userAgent;
     var isAndroid = ua.indexOf('Android') > -1 || ua.indexOf('Adr') > -1;//android终端
@@ -18,9 +19,19 @@
     
     function dolink() {
         if (isiOS) {
-            window.location.href = ios_url;
+            setTimeout(function(){
+                window.location.href = ios_url;
+            }, 300);
+            if (window._czc) {
+                window._czc.push(['_trackEvent', 'banner.click', 'click', 'ios']);
+            }
         } else {
-            window.location.href = android_url;
+            setTimeout(function(){
+                window.location.href = android_url;
+            }, 300);
+            if (window._czc) {
+                window._czc.push(['_trackEvent', 'banner.click', 'click', 'az']);
+            }
         }
     };
 </script>
