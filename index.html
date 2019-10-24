@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"><title>抖音联合游戏-lovin house</title>
+<meta name="aweme:title" content="抖音联合游戏-lovin house">
+<meta name="aweme:description" content="抖音联合游戏-lovin house">
+<meta name="aweme:image" content="https://lovinhouse.github.io/img/lh_logo.png">
+<meta property="aweme:image:width" content="750">
+<meta property="aweme:image:height" content="750">
+<meta name="aweme:url" content="https://lovinhouse.github.io">
+<meta name="aweme:qrcode" content="">
+<script>
+    var ua = navigator.userAgent;
+    var isAndroid = ua.indexOf('Android') > -1 || ua.indexOf('Adr') > -1;//android终端
+    var isiOS = !!ua.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);//ios终端
+    
+    var ios_url = 'https://apps.apple.com/cn/app/lovin-house/id1447097214';
+    var android_url = 'https://android.myapp.com/myapp/detail.htm?apkName=com.ccspace.lovinhouse'; 
+    
+    function dolink() {
+        if (isiOS) {
+            window.location.href = ios_url;
+        } else {
+            window.location.href = android_url;
+        }
+    };
+</script>
+<style>
+html, body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+#app {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+.backbg img {
+    width: 100%;
+    vertical-align: bottom;
+}
+.banner {
+    position: fixed;
+    left: 50%;
+    bottom: 0;
+    width: 75.68%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+.banner img {
+    width: 100%;
+}
+</style>
+</head>
+<body>
+
+<div id="app">
+    <div class="backbg"><img src="img/bg.jpg" alt=""></div>
+    <div class="banner" onclick="dolink()"><img src="img/banner.png" alt=""></div>
+</div>
+</body></html>
